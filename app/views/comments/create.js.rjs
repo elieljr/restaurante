@@ -1,0 +1,10 @@
+page.visual_effect :shake, 'novo_comment'
+page.visual_effect :puff, 'novo_comment'
+
+page.insert_html :bottom, 'comments',
+                 :partial => 'comment',
+                 :locals => { :comment => @comment }
+page.insert_html :after,'comments',
+                 :partial => 'novo_comment',
+                 :locals => { :comentavel => @comment.comentavel }
+page.visual_effect :highlight, "comment_#{@comment.id}"

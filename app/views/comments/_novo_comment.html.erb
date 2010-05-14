@@ -1,0 +1,7 @@
+<div id='novo_comment'>
+  <%= link_to_remote 'Novo comentário', :update => 'novo_comment',
+            :url => new_comment_path(
+                    'comment[comentavel_type]' => comentavel.class,
+                    'comment[comentavel_id]' => comentavel) %>
+</div>
+

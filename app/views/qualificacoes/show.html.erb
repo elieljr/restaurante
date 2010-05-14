@@ -1,0 +1,32 @@
+<p>
+  <b>Cliente:</b>
+  <%=h @qualificacao.cliente.nome %>
+</p>
+
+<p>
+  <b>Restaurante:</b>
+  <%=h @qualificacao.restaurante.nome %>
+</p>
+
+<p>
+  <b>Nota:</b>
+  <%=h number_with_delimiter(@qualificacao.nota,:separator=>",") %>
+</p>
+
+<p>
+  <b>Valor gasto:</b>
+  <%=h (valor_formatado@qualificacao.valor_gasto) %>
+</p>
+
+<% unless @qualificacao.comments.empty?%>
+    <%= comments @qualificacao %>
+<% end %>
+<%= novo_comment(@qualificacao) %>
+
+
+<%= link_to 'Edit', edit_qualificacao_path(@qualificacao) %> |
+<%= link_to 'Back', qualificacoes_path %>
+
+<br>
+<br>
+		

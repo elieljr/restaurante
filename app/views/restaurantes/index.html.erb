@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Sistema de Avalia&ccedil;&atilde;o de Restaurantes</title>
+	</head>
+	<body>
+		<h1>Sistema de Avalia&ccedil;&atilde;o de Restaurantes</h1>
+		
+		<%= render :partial=>"titulo" %>
+		<p style="color:green"><% flash[:notice] %></p>
+		
+		<%= link_to 'Ver lista de restaurantes', {:action=>'list'} %><br>
+		<%= link_to 'Adicionar restaurante', {:action=>'new'} %><br>
+	</body>
+</html>

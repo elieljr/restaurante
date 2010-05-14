@@ -1,0 +1,7 @@
+<p id="comment_<%= comment.id %>">  
+  	<%= comment.conteudo %>
+	<%= link_to_remote 'remover', :url => comment_path(comment),
+                          :method => :delete %>
+  
+  
+</p>
